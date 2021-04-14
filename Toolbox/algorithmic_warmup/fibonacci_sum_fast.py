@@ -5,7 +5,7 @@ def fibonacci_sum_fast(num):
     digit of the sum F0 + F1 + · · · + Fn.'''
     if num <= 1:
         return num
-    # S(n) = F(n + 2 ) - 1
+    # S(n) = F(n + 2) - 1
     num = (num + 2) % 60 # The Fibonacci series has a 60 digit cycle.
     previous = 0
     current  = 1

@@ -19,7 +19,7 @@ def fibonacci_squares_fast(num):
     the sum of squares of Fibonacci numbers'''
     if num <= 1:
         return num
-    # F(n + 1 ) - 1
+    # F(n + 1) - 1
     n_fib = num
     num = (num + 1) % 60 # The Fibonacci series has a 60 digit cycle.
     previous = 0
