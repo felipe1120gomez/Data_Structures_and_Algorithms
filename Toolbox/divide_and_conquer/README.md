@@ -1,7 +1,7 @@
 # Divide and Conquer
 
 These scripts use the sys module to read the input data.
-press ctrl z after entering the data to run the script.
+Press ctrl z after entering the data to run the script.
 
 ## binary_search.py
 
@@ -34,8 +34,7 @@ The first 4 is the length of the list.
 
 ## points_and_segments.py
 
-Given a set of points on a line and a set of segments on a line. The goal is to compute, for
-each point, the number of segments that contain this point.
+Given a set of points on a line and a set of segments on a line. The goal is to compute, for each point, the number of segments that contain this point.
 Sample.
 Input: 2 3
        0 5
