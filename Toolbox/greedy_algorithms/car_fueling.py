@@ -53,7 +53,7 @@ def compute_min_refills(distance, tank, stops):
 
         #If tank minus distance already traveled is greater than or equal to distance to travel
         if tank - (cur_i - prev_i) >= (next_i - cur_i):
-            tank -= (cur_i - prev_i)#Tank less distance already traveled
+            tank -= (cur_i - prev_i)#Tank minus distance already traveled
             continue#Next station
 
         #Otherwise refill to be able to reach that distance

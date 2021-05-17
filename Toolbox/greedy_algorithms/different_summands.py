@@ -7,15 +7,20 @@ def optimal_summands(num):
     𝑎1 + 𝑎2 + · · · + 𝑎𝑘 where 𝑎1, . . . , 𝑎𝑘 are positive integers and 𝑎𝑖 ̸= 𝑎𝑗 for all 1 ≤ 𝑖 < 𝑗 ≤ 𝑘.'''
 
     summands = []
-    # Mathematical operation to find the first numbers
-    sequence = int(((((num * 8) + 1) ** 0.5) - 1) / 2)
-    # Mathematical operation to find the last number
-    last_num = int(num - (((sequence - 1) * sequence) / 2))
+    temp_sum = 0
 
-    for i in range(1, sequence):
-        summands.append(i)
+    for number in range(1, num + 1):
+        temp_sum += number # Partial sum
+        if temp_sum <= num:
+            summands.append(number)
 
-    summands.append(last_num)
+        else:
+            temp_sum -= number
+            prev = summands.pop() # Remove problematic number
+            temp_sum -= prev
+            last = num - temp_sum # 𝑎𝑘 number
+            summands.append(last)
+            break
 
     return summands
 
