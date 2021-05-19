@@ -2,7 +2,7 @@
 
 ## check_brackets.py
 
-This script's first priority is to find the first unmatched closing bracket which either doesn’t have an opening bracket before it, like ] in ](), or closes the wrong opening bracket, like } in ()[}. If there are no such mistakes, then it should find the first unmatched opening bracket without the corresponding closing bracket after it, like ( in {}([]. If there are no mistakes, the script should inform the user that the usage of brackets is correct.
+This script first priority is to find the first unmatched closing bracket which either doesn’t have an opening bracket before it, like ] in ](), or closes the wrong opening bracket, like } in ()[}. If there are no such mistakes, then it should find the first unmatched opening bracket without the corresponding closing bracket after it, like ( in {}([]. If there are no mistakes, the script should inform the user that the usage of brackets is correct.
 * Sample.
 ```
 Input: foo(bar[i);
