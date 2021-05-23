@@ -56,13 +56,15 @@ class Exchange:
 
             for vertex in range(self.num_v):
 
+                w_neighbor = 0 # neighbor index to get the weight
                 for neighbor in self.adj_list[vertex]:
-                    w_neighbor = self.adj_list[vertex].index(neighbor) # neighbor index to check the weight
                     if self.dist[neighbor] > (self.dist[vertex] + self.weight[vertex][w_neighbor]):
                         self.dist[neighbor] = (self.dist[vertex] + self.weight[vertex][w_neighbor])
                         # if iteration num_v modifies any distance, there is a negative cycle
                         if i == (self.num_v):
                             return 1
+
+                    w_neighbor += 1
 
         return 0
 

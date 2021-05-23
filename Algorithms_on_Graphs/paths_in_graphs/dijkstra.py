@@ -79,13 +79,15 @@ class Travel:
             min_vertex = heapq.heappop(min_heap) # the pair with the shortest distance
             vertex = min_vertex[1]
 
+            w_neighbor = 0 # neighbor index to get the weight
             for neighbor in self.adj_list[vertex]:
-                w_neighbor = self.adj_list[vertex].index(neighbor) # neighbor index to check the weight
                 if self.dist[neighbor] > (self.dist[vertex] + self.weight[vertex][w_neighbor]):
                     self.dist[neighbor] = (self.dist[vertex] + self.weight[vertex][w_neighbor])
                     self.prev[neighbor] = vertex
                     pair = [self.dist[neighbor], neighbor] # pair [distance, vertex]
                     heapq.heappush(min_heap, pair)
+
+                w_neighbor += 1
 
     def distance(self):
         '''Reconstruct the path and determine if it is possible to connect the starting
