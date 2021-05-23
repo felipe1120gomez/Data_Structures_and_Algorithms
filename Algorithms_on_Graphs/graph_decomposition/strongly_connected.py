@@ -148,7 +148,7 @@ class Dgraph:
         '''Increases the number of connected components with each call of the
         Explore function, returns the number of strongly connected components of a graph.'''
 
-        self.dfs_rev()
+        self.dfs_rev() # First you have to reverse the graph
 
         id_comp = 1
 
