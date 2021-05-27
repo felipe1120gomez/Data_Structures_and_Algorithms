@@ -19,7 +19,7 @@ In this graph, there are two paths between vertices 1 and 4: 1-4 and 1-2 3-4.
 
 ## connected_components.py
 
-This program, given an undirected graph with 𝑛 vertices and 𝑚 edges, compute the number of connected components in it.
+This program, given an undirected graph with 𝑛 vertices and 𝑚 edges, computes the number of connected components in it.
 * Sample.
 ```
 Input: 4 2
