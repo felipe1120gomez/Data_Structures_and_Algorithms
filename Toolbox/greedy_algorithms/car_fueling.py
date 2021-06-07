@@ -20,10 +20,7 @@ def compute_min_refills(distance, tank, stops):
     if tank < stops[0] or tank < (distance - stops[-1]):
         return -1
 
-    for i in range(travel):
-
-        if i == travel - 1:#Avoid Index error
-            break
+    for i in range(travel - 1):
 
         next_i = stops[i + 1]#Next station
 
