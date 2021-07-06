@@ -39,7 +39,7 @@ class SuffixTree():
 
         Attributes
         ----------
-        label : SuffixTree instance
+        label : Node instance
             Label on path leading to this node
         edge : dict()
             Outgoing edges; maps characters to nodes, Key = characters, value = node
