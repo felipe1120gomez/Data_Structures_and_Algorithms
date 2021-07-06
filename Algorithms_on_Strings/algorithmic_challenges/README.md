@@ -56,3 +56,37 @@ Output: 4 2 0 1
 
 ```
 The pattern ATA appears at positions 0, 2, and 4, the pattern TATAT appears at position 1.
+
+## suffix_tree_from_array.py
+
+This program constructs a suffix tree from the suffix array and LCP array of a string in *O*(|string|).
+
+* Sample.
+```
+Input: GTAGT$
+       5 2 3 0 4 1
+       0 0 2 0 1
+
+```
+```
+Output: 5 6
+        2 6
+        3 5
+        5 6
+        2 6
+        4 5
+        5 6
+        2 6
+
+```
+Explanation:
+
+```
+𝑖 𝑆𝐴[𝑖] 𝐿𝐶𝑃[𝑖] suffix
+0  5     0      $
+1  2     0      AGT$
+2  3     2      GT$
+3  0     0      GTAGT$
+4  4     1      T$
+5  1            TAGT$
+```
